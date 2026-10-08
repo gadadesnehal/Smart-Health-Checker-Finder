@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Nearby Facility | HealthCare Checker Finder</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <span class="logo-symbol">✚</span>
+
+        <div>
+            <strong>HealthCare</strong>
+            <small>Checker Finder</small>
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html"
+           data-i18n="navHome">
+           Home
+        </a>
+
+        <a href="specialist.html"
+           data-i18n="navSpecialist">
+           Find Specialist
+        </a>
+
+        <a href="facilities.html"
+           class="active"
+           data-i18n="navFacilities">
+           Nearby Facility
+        </a>
+
+        <a href="awareness.html"
+           data-i18n="navAwareness">
+           Awareness
+        </a>
+
+    </nav>
+
+
+    <select id="languageSelect"
+            class="language-select">
+
+        <option value="en">English</option>
+
+        <option value="hi">हिन्दी</option>
+
+        <option value="mr">मराठी</option>
+
+    </select>
+
+</header>
+
+
+<main>
+
+<section class="page-hero facility-hero">
+
+    <div class="page-hero-symbol">
+        ⊙
+    </div>
+
+    <span class="section-tag">
+        NEARBY HEALTHCARE
+    </span>
+
+    <h1 data-i18n="facilityTitle">
+        Your Recommended Healthcare Facility
+    </h1>
+
+    <p data-i18n="facilityText">
+        We use your location and the selected symptoms to suggest one suitable facility.
+    </p>
+
+</section>
+
+
+<section class="location-section">
+
+    <div class="location-status-card">
+
+        <div class="location-icon">
+            ⊙
+        </div>
+
+        <div>
+
+            <h3 data-i18n="locationTitle">
+                Your Location
+            </h3>
+
+            <p id="locationStatus"
+               data-i18n="locationWaiting">
+
+                Location permission is required to find a nearby facility.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <button id="locationBtn"
+            class="secondary-btn">
+
+        <span>⊙</span>
+
+        <span data-i18n="useLocation">
+            Use My Location
+        </span>
+
+    </button>
+
+</section>
+
+
+<section id="facilitiesContainer"
+         class="facilities-section">
+
+    <div class="facility-loading">
+
+        <div class="loading-symbol">
+            ⌁
+        </div>
+
+        <p data-i18n="findingFacility">
+            Finding a suitable healthcare facility...
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="recommendation-info">
+
+    <div class="recommendation-info-icon">
+        ★
+    </div>
+
+    <div>
+
+        <h3 data-i18n="recommendationTitle">
+            How we recommend
+        </h3>
+
+        <p data-i18n="recommendationText">
+            The system considers symptom-specialist match, hospital rating
+            and distance to provide one recommendation instead of showing
+            many confusing options.
+        </p>
+
+    </div>
+
+</section>
+
+
+<div class="demo-note">
+
+    <strong>Prototype Note:</strong>
+
+    The hospital and doctor information currently shown in this project
+    is demonstration data. Replace it with verified local healthcare
+    information before real-world deployment.
+
+</div>
+
+
+<section class="disclaimer">
+
+    <div class="disclaimer-symbol">
+        ⓘ
+    </div>
+
+    <div>
+
+        <strong data-i18n="disclaimerTitle">
+            Important Disclaimer
+        </strong>
+
+        <p data-i18n="disclaimerText">
+            This website provides general healthcare information and guidance only.
+            It does not diagnose diseases or replace professional medical advice,
+            diagnosis or treatment.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        <span>✚</span>
+        <strong>HealthCare Checker Finder</strong>
+    </div>
+
+    <p data-i18n="footerText">
+        General healthcare awareness and guidance platform.
+    </p>
+
+    <p class="copyright">
+        © 2026 HealthCare Checker Finder
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

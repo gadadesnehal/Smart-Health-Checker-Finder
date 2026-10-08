@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find Specialist | HealthCare Checker Finder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <span class="logo-symbol">✚</span>
+
+        <div>
+            <strong>HealthCare</strong>
+            <small>Checker Finder</small>
+        </div>
+    </div>
+
+
+    <nav>
+        <a href="index.html" data-i18n="navHome">Home</a>
+
+        <a href="specialist.html"
+           class="active"
+           data-i18n="navSpecialist">
+           Find Specialist
+        </a>
+
+        <a href="facilities.html"
+           data-i18n="navFacilities">
+           Nearby Facility
+        </a>
+
+        <a href="awareness.html"
+           data-i18n="navAwareness">
+           Awareness
+        </a>
+    </nav>
+
+
+    <select id="languageSelect" class="language-select">
+
+        <option value="en">English</option>
+
+        <option value="hi">हिन्दी</option>
+
+        <option value="mr">मराठी</option>
+
+    </select>
+
+</header>
+
+
+<main>
+
+<section class="page-hero">
+
+    <div class="page-hero-symbol">
+        ⌁
+    </div>
+
+    <span class="section-tag">
+        HEALTH GUIDANCE
+    </span>
+
+    <h1 data-i18n="specialistPageTitle">
+        Find the Right Specialist
+    </h1>
+
+    <p data-i18n="specialistPageText">
+        Select the symptoms you are experiencing and get general guidance
+        about a suitable medical specialist.
+    </p>
+
+</section>
+
+
+<section class="symptom-section">
+
+    <div class="selection-header">
+
+        <div>
+            <span class="section-tag">STEP 01</span>
+
+            <h2 data-i18n="selectSymptoms">
+                Select Your Symptoms
+            </h2>
+
+            <p data-i18n="selectSymptomsText">
+                You can select one or more symptoms.
+            </p>
+        </div>
+
+
+        <div class="selected-counter">
+
+            <span>⌁</span>
+
+            <strong id="selectedCount">0</strong>
+
+            <span data-i18n="selected">
+                Selected
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="category-buttons">
+
+        <button type="button"
+                class="category-btn active"
+                data-category="all">
+
+            ◉ All
+
+        </button>
+
+
+        <button type="button"
+                class="category-btn"
+                data-category="general">
+
+            ✚ General
+
+        </button>
+
+
+        <button type="button"
+                class="category-btn"
+                data-category="respiratory">
+
+            ♡ Respiratory
+
+        </button>
+
+
+        <button type="button"
+                class="category-btn"
+                data-category="digestive">
+
+            ◌ Digestive
+
+        </button>
+
+
+        <button type="button"
+                class="category-btn"
+                data-category="skin">
+
+            ◈ Skin
+
+        </button>
+
+
+        <button type="button"
+                class="category-btn"
+                data-category="bones">
+
+            ◇ Bones & Joints
+
+        </button>
+
+
+        <button type="button"
+                class="category-btn"
+                data-category="dental">
+
+            ✦ Dental
+
+        </button>
+
+    </div>
+
+
+    <div id="symptomsGrid" class="symptoms-grid"></div>
+
+
+    <div class="find-specialist-area">
+
+        <button id="findSpecialistBtn"
+                class="primary-btn large-btn">
+
+            <span>✚</span>
+
+            <span data-i18n="findSpecialist">
+                Find Specialist
+            </span>
+
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="guidance-note">
+
+    <div class="note-symbol">
+        ⓘ
+    </div>
+
+    <div>
+
+        <strong data-i18n="guidanceNoteTitle">
+            Please remember
+        </strong>
+
+        <p data-i18n="guidanceNoteText">
+            The suggested specialist is based only on the symptoms selected.
+            It is general guidance and not a medical diagnosis.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        <span>✚</span>
+        <strong>HealthCare Checker Finder</strong>
+    </div>
+
+    <p data-i18n="footerText">
+        General healthcare awareness and guidance platform.
+    </p>
+
+    <p class="copyright">
+        © 2026 HealthCare Checker Finder
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
