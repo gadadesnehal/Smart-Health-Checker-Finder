@@ -1390,8 +1390,8 @@ const hospitals = [
     {
         name: "Dr Chaudhari's Shree Hospital Pune",
         city: "Pune",
-        lat: 18.5950,
-        lng: 73.7350,
+        lat: 19.5950,
+        lng: 75.7350,
         rating: 4.8,
         doctor: "",
         phone: "7709361706",
