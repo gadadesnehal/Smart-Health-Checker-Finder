@@ -1132,7 +1132,17 @@ const symptomCategories = {
 ========================================================= */
 
 const hospitals = [
-
+   
+     {
+        name: "CityCare General Hospital - Pune",
+        city: "Pune",
+        lat: 18.5919,
+        lng: 73.7390,
+        rating: 4.9,
+        doctor: "Dr. Sachin Shivnitwar",
+        phone: "9272122292",
+        specialist: "General Physician"
+    },
     {
         name: "CityCare General Hospital - Pune",
         city: "Pune",
@@ -1395,7 +1405,7 @@ const hospitals = [
         lng: 74.7480,
         rating: 4.8,
         doctor: "Dr. Amit Deshmukh",
-        phone: "9000000013",
+        phone: "0241 232 9105",
         specialist: "General Physician"
     },
 
@@ -1406,7 +1416,7 @@ const hospitals = [
         lng: 74.7400,
         rating: 4.7,
         doctor: "Dr. Pooja More",
-        phone: "9000000014",
+        phone: "9881030603",
         specialist: "Dentist"
     },
 
@@ -1417,7 +1427,7 @@ const hospitals = [
         lng: 74.7600,
         rating: 4.6,
         doctor: "Dr. Nikhil Pawar",
-        phone: "9000000015",
+        phone: "9837464546",
         specialist: "ENT Specialist"
     },
 
@@ -1428,7 +1438,7 @@ const hospitals = [
         lng: 74.7300,
         rating: 4.7,
         doctor: "Dr. Sameer Kale",
-        phone: "9000000016",
+        phone: "9073647483",
         specialist: "Orthopedic Specialist"
     }
 ];
