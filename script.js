@@ -1,6 +1,8 @@
 /* =========================================================
-   HEALTH CHECKER FINDER
-   Main JavaScript File
+   HEALTH CHECKER FINDER - COMPLETE SCRIPT.JS
+   Existing design is controlled by HTML/CSS.
+   This file controls language, symptoms, specialist guidance,
+   location and ONE hospital recommendation.
 ========================================================= */
 
 
@@ -19,7 +21,10 @@ const translations = {
 
         heroBadge: "Smart Healthcare Guidance",
         heroTitle: "Your Guide to Better Healthcare",
-        heroText: "Select your symptoms and get guidance about the suitable specialist and a nearby healthcare facility.",
+
+        heroText:
+            "Select your symptoms and get guidance about the suitable specialist and a nearby healthcare facility.",
+
         findSpecialist: "Find Specialist",
         learnHealth: "Learn About Health",
 
@@ -28,93 +33,175 @@ const translations = {
         guidance: "Guidance",
 
         healthFirst: "Your Health Matters",
-        healthFirstText: "Understand your symptoms. Find the right direction.",
+        healthFirstText:
+            "Understand your symptoms. Find the right direction.",
 
-        howTitle: "Healthcare guidance in 3 simple steps",
-        howText: "A simple way to understand your symptoms and find suitable healthcare guidance.",
+        howTitle:
+            "Healthcare guidance in 3 simple steps",
+
+        howText:
+            "A simple way to understand your symptoms and find suitable healthcare guidance.",
 
         step1Title: "Select Symptoms",
-        step1Text: "Choose the symptoms you are experiencing.",
+        step1Text:
+            "Choose the symptoms you are experiencing.",
 
-        step2Title: "Get Specialist Guidance",
-        step2Text: "Get guidance about the suitable medical specialist.",
+        step2Title:
+            "Get Specialist Guidance",
 
-        step3Title: "Find Nearby Facility",
-        step3Text: "Get one suitable nearby healthcare facility recommendation.",
+        step2Text:
+            "Get guidance about the suitable medical specialist.",
 
-        featureTitle: "Designed for simple healthcare guidance",
+        step3Title:
+            "Find Nearby Facility",
 
-        feature1Title: "Symptom Guidance",
-        feature1Text: "Select symptoms and receive general specialist guidance.",
+        step3Text:
+            "Get one suitable nearby healthcare facility recommendation.",
 
-        feature2Title: "Nearby Facility",
-        feature2Text: "Use your location to find a suitable nearby facility.",
+        featureTitle:
+            "Designed for simple healthcare guidance",
 
-        feature3Title: "Smart Recommendation",
-        feature3Text: "One recommendation helps reduce confusion between many options.",
+        feature1Title:
+            "Symptom Guidance",
 
-        feature4Title: "Multiple Languages",
-        feature4Text: "Use the website in English, Hindi or Marathi.",
+        feature1Text:
+            "Select symptoms and receive general specialist guidance.",
 
-        emergencyTitle: "Emergency Contacts",
-        emergencyText: "For serious or emergency situations, contact the appropriate emergency service immediately.",
+        feature2Title:
+            "Nearby Facility",
+
+        feature2Text:
+            "Use your location to find a suitable nearby facility.",
+
+        feature3Title:
+            "Smart Recommendation",
+
+        feature3Text:
+            "One recommendation helps reduce confusion between many options.",
+
+        feature4Title:
+            "Multiple Languages",
+
+        feature4Text:
+            "Use the website in English, Hindi or Marathi.",
+
+        emergencyTitle:
+            "Emergency Contacts",
+
+        emergencyText:
+            "For serious or emergency situations, contact the appropriate emergency service immediately.",
 
         emergency112: "Emergency",
         emergency108: "Ambulance",
         childHelpline: "Child Helpline",
         medicalHelpline: "Health Helpline",
 
-        disclaimerTitle: "Important Disclaimer",
-        disclaimerText: "This website provides general healthcare information and guidance only. It does not diagnose diseases or replace professional medical advice, diagnosis or treatment.",
+        disclaimerTitle:
+            "Important Disclaimer",
 
-        footerText: "General healthcare awareness and guidance platform.",
+        disclaimerText:
+            "This website provides general healthcare information and guidance only. It does not diagnose diseases or replace professional medical advice, diagnosis or treatment.",
 
-        specialistPageTitle: "Find the Right Specialist",
-        specialistPageText: "Select the symptoms you are experiencing and get general guidance about a suitable medical specialist.",
+        footerText:
+            "General healthcare awareness and guidance platform.",
 
-        selectSymptoms: "Select Your Symptoms",
-        selectSymptomsText: "You can select one or more symptoms.",
+        specialistPageTitle:
+            "Find the Right Specialist",
+
+        specialistPageText:
+            "Select the symptoms you are experiencing and get general guidance about a suitable medical specialist.",
+
+        selectSymptoms:
+            "Select Your Symptoms",
+
+        selectSymptomsText:
+            "You can select one or more symptoms.",
+
         selected: "Selected",
 
-        guidanceNoteTitle: "Please remember",
-        guidanceNoteText: "The suggested specialist is based only on the symptoms selected. It is general guidance and not a medical diagnosis.",
+        guidanceNoteTitle:
+            "Please remember",
 
-        facilityTitle: "Your Recommended Healthcare Facility",
-        facilityText: "We use your location and the selected symptoms to suggest one suitable facility.",
+        guidanceNoteText:
+            "The suggested specialist is based only on the symptoms selected. It is general guidance and not a medical diagnosis.",
 
-        locationTitle: "Your Location",
-        locationWaiting: "Location permission is required to find a nearby facility.",
-        useLocation: "Use My Location",
-        findingFacility: "Finding a suitable healthcare facility...",
+        facilityTitle:
+            "Your Recommended Healthcare Facility",
 
-        recommendationTitle: "How we recommend",
-        recommendationText: "The system considers symptom-specialist match, hospital rating and distance to provide one recommendation instead of showing many confusing options.",
+        facilityText:
+            "We use your location and the selected symptoms to suggest one suitable facility.",
 
-        awarenessTitle: "Learn. Prevent. Stay Healthy.",
-        awarenessText: "Simple healthcare awareness information for everyday wellbeing.",
+        locationTitle:
+            "Your Location",
 
-        awareness1Title: "Healthy Food",
-        awareness1Text: "Include a variety of fruits, vegetables, grains and other nutritious foods in your regular diet.",
+        locationWaiting:
+            "Location permission is required to find a nearby facility.",
 
-        awareness2Title: "Stay Hydrated",
-        awareness2Text: "Drink enough water according to your daily needs and activity.",
+        useLocation:
+            "Use My Location",
 
-        awareness3Title: "Physical Activity",
-        awareness3Text: "Regular age-appropriate physical activity can support overall health and wellbeing.",
+        findingFacility:
+            "Finding a suitable healthcare facility...",
 
-        awareness4Title: "Good Sleep",
-        awareness4Text: "Maintain a regular sleep routine and give your body enough time to rest.",
+        recommendationTitle:
+            "How we recommend",
 
-        awareness5Title: "Regular Checkups",
-        awareness5Text: "Follow appropriate health checkups and consult a qualified healthcare professional when needed.",
+        recommendationText:
+            "The system considers symptom-specialist match, hospital rating and distance to provide one recommendation instead of showing many confusing options.",
 
-        awareness6Title: "Do Not Self-Diagnose",
-        awareness6Text: "Online information can provide awareness, but diagnosis should be done by a qualified healthcare professional.",
+        awarenessTitle:
+            "Learn. Prevent. Stay Healthy.",
 
-        tipTitle: "Small healthy habits matter.",
-        tipText: "Maintain balanced habits, pay attention to unusual symptoms and seek professional advice when required."
+        awarenessText:
+            "Simple healthcare awareness information for everyday wellbeing.",
+
+        awareness1Title:
+            "Healthy Food",
+
+        awareness1Text:
+            "Include a variety of fruits, vegetables, grains and other nutritious foods in your regular diet.",
+
+        awareness2Title:
+            "Stay Hydrated",
+
+        awareness2Text:
+            "Drink enough water according to your daily needs and activity.",
+
+        awareness3Title:
+            "Physical Activity",
+
+        awareness3Text:
+            "Regular age-appropriate physical activity can support overall health and wellbeing.",
+
+        awareness4Title:
+            "Good Sleep",
+
+        awareness4Text:
+            "Maintain a regular sleep routine and give your body enough time to rest.",
+
+        awareness5Title:
+            "Regular Checkups",
+
+        awareness5Text:
+            "Follow appropriate health checkups and consult a qualified healthcare professional when needed.",
+
+        awareness6Title:
+            "Do Not Self-Diagnose",
+
+        awareness6Text:
+            "Online information can provide awareness, but diagnosis should be done by a qualified healthcare professional.",
+
+        tipTitle:
+            "Small healthy habits matter.",
+
+        tipText:
+            "Maintain balanced habits, pay attention to unusual symptoms and seek professional advice when required."
     },
 
+
+    /* =====================================================
+       HINDI
+    ===================================================== */
 
     hi: {
 
@@ -123,105 +210,207 @@ const translations = {
         navFacilities: "नजदीकी सुविधा",
         navAwareness: "स्वास्थ्य जागरूकता",
 
-        heroBadge: "स्मार्ट स्वास्थ्य मार्गदर्शन",
-        heroTitle: "बेहतर स्वास्थ्य के लिए आपकी गाइड",
-        heroText: "अपने लक्षण चुनें और उपयुक्त विशेषज्ञ तथा नजदीकी स्वास्थ्य सुविधा की जानकारी प्राप्त करें।",
+        heroBadge:
+            "स्मार्ट स्वास्थ्य मार्गदर्शन",
 
-        findSpecialist: "विशेषज्ञ खोजें",
-        learnHealth: "स्वास्थ्य के बारे में जानें",
+        heroTitle:
+            "बेहतर स्वास्थ्य के लिए आपकी गाइड",
+
+        heroText:
+            "अपने लक्षण चुनें और उपयुक्त विशेषज्ञ तथा नजदीकी स्वास्थ्य सुविधा की जानकारी प्राप्त करें।",
+
+        findSpecialist:
+            "विशेषज्ञ खोजें",
+
+        learnHealth:
+            "स्वास्थ्य के बारे में जानें",
 
         symptoms: "लक्षण",
         specialists: "विशेषज्ञ",
         guidance: "मार्गदर्शन",
 
-        healthFirst: "आपका स्वास्थ्य महत्वपूर्ण है",
-        healthFirstText: "अपने लक्षण समझें और सही दिशा प्राप्त करें।",
+        healthFirst:
+            "आपका स्वास्थ्य महत्वपूर्ण है",
 
-        howTitle: "3 आसान चरणों में स्वास्थ्य मार्गदर्शन",
-        howText: "अपने लक्षणों को समझने और उचित स्वास्थ्य मार्गदर्शन प्राप्त करने का आसान तरीका।",
+        healthFirstText:
+            "अपने लक्षण समझें और सही दिशा प्राप्त करें।",
 
-        step1Title: "लक्षण चुनें",
-        step1Text: "अपने अनुभव किए जा रहे लक्षण चुनें।",
+        howTitle:
+            "3 आसान चरणों में स्वास्थ्य मार्गदर्शन",
 
-        step2Title: "विशेषज्ञ मार्गदर्शन",
-        step2Text: "उपयुक्त चिकित्सा विशेषज्ञ के बारे में सामान्य मार्गदर्शन प्राप्त करें।",
+        howText:
+            "अपने लक्षणों को समझने और उचित स्वास्थ्य मार्गदर्शन प्राप्त करने का आसान तरीका।",
 
-        step3Title: "नजदीकी सुविधा खोजें",
-        step3Text: "एक उपयुक्त नजदीकी स्वास्थ्य सुविधा की सिफारिश प्राप्त करें।",
+        step1Title:
+            "लक्षण चुनें",
 
-        featureTitle: "सरल स्वास्थ्य मार्गदर्शन के लिए बनाया गया",
+        step1Text:
+            "अपने अनुभव किए जा रहे लक्षण चुनें।",
 
-        feature1Title: "लक्षण मार्गदर्शन",
-        feature1Text: "लक्षण चुनें और विशेषज्ञ के बारे में सामान्य मार्गदर्शन प्राप्त करें।",
+        step2Title:
+            "विशेषज्ञ मार्गदर्शन",
 
-        feature2Title: "नजदीकी सुविधा",
-        feature2Text: "उपयुक्त नजदीकी सुविधा खोजने के लिए अपने स्थान का उपयोग करें।",
+        step2Text:
+            "उपयुक्त चिकित्सा विशेषज्ञ के बारे में सामान्य मार्गदर्शन प्राप्त करें।",
 
-        feature3Title: "स्मार्ट सिफारिश",
-        feature3Text: "एक सिफारिश कई विकल्पों के बीच होने वाले भ्रम को कम करती है।",
+        step3Title:
+            "नजदीकी सुविधा खोजें",
 
-        feature4Title: "कई भाषाएं",
-        feature4Text: "वेबसाइट का उपयोग अंग्रेजी, हिंदी या मराठी में करें।",
+        step3Text:
+            "एक उपयुक्त नजदीकी स्वास्थ्य सुविधा की सिफारिश प्राप्त करें।",
 
-        emergencyTitle: "आपातकालीन संपर्क",
-        emergencyText: "गंभीर या आपातकालीन स्थिति में तुरंत उचित आपातकालीन सेवा से संपर्क करें।",
+        featureTitle:
+            "सरल स्वास्थ्य मार्गदर्शन के लिए बनाया गया",
 
-        emergency112: "आपातकाल",
-        emergency108: "एम्बुलेंस",
-        childHelpline: "बाल हेल्पलाइन",
-        medicalHelpline: "स्वास्थ्य हेल्पलाइन",
+        feature1Title:
+            "लक्षण मार्गदर्शन",
 
-        disclaimerTitle: "महत्वपूर्ण सूचना",
-        disclaimerText: "यह वेबसाइट केवल सामान्य स्वास्थ्य जानकारी और मार्गदर्शन प्रदान करती है। यह बीमारी का निदान नहीं करती और डॉक्टर की सलाह, निदान या उपचार का विकल्प नहीं है।",
+        feature1Text:
+            "लक्षण चुनें और विशेषज्ञ के बारे में सामान्य मार्गदर्शन प्राप्त करें।",
 
-        footerText: "सामान्य स्वास्थ्य जागरूकता और मार्गदर्शन प्लेटफॉर्म।",
+        feature2Title:
+            "नजदीकी सुविधा",
 
-        specialistPageTitle: "सही विशेषज्ञ खोजें",
-        specialistPageText: "अपने लक्षण चुनें और उपयुक्त चिकित्सा विशेषज्ञ के बारे में सामान्य मार्गदर्शन प्राप्त करें।",
+        feature2Text:
+            "उपयुक्त नजदीकी सुविधा खोजने के लिए अपने स्थान का उपयोग करें।",
 
-        selectSymptoms: "अपने लक्षण चुनें",
-        selectSymptomsText: "आप एक या अधिक लक्षण चुन सकते हैं।",
-        selected: "चयनित",
+        feature3Title:
+            "स्मार्ट सिफारिश",
 
-        guidanceNoteTitle: "कृपया याद रखें",
-        guidanceNoteText: "सुझाया गया विशेषज्ञ केवल आपके चुने हुए लक्षणों पर आधारित है। यह सामान्य मार्गदर्शन है, चिकित्सा निदान नहीं।",
+        feature3Text:
+            "एक सिफारिश कई विकल्पों के बीच होने वाले भ्रम को कम करती है।",
 
-        facilityTitle: "आपके लिए सुझाई गई स्वास्थ्य सुविधा",
-        facilityText: "हम आपके स्थान और चुने गए लक्षणों के आधार पर एक उपयुक्त सुविधा की सिफारिश करते हैं।",
+        feature4Title:
+            "कई भाषाएं",
 
-        locationTitle: "आपका स्थान",
-        locationWaiting: "नजदीकी सुविधा खोजने के लिए स्थान की अनुमति आवश्यक है।",
-        useLocation: "मेरा स्थान उपयोग करें",
-        findingFacility: "उपयुक्त स्वास्थ्य सुविधा खोजी जा रही है...",
+        feature4Text:
+            "वेबसाइट का उपयोग अंग्रेजी, हिंदी या मराठी में करें।",
 
-        recommendationTitle: "हम कैसे सिफारिश करते हैं",
-        recommendationText: "सिस्टम लक्षण-विशेषज्ञ मिलान, अस्पताल की रेटिंग और दूरी को ध्यान में रखकर एक सिफारिश देता है।",
+        emergencyTitle:
+            "आपातकालीन संपर्क",
 
-        awarenessTitle: "जानें। बचाव करें। स्वस्थ रहें।",
-        awarenessText: "दैनिक स्वास्थ्य के लिए सरल स्वास्थ्य जागरूकता जानकारी।",
+        emergencyText:
+            "गंभीर या आपातकालीन स्थिति में तुरंत उचित आपातकालीन सेवा से संपर्क करें।",
 
-        awareness1Title: "स्वस्थ भोजन",
-        awareness1Text: "अपने नियमित आहार में फल, सब्जियां, अनाज और अन्य पौष्टिक खाद्य पदार्थ शामिल करें।",
+        emergency112:
+            "आपातकाल",
 
-        awareness2Title: "पर्याप्त पानी",
-        awareness2Text: "अपनी दैनिक जरूरत और गतिविधि के अनुसार पर्याप्त पानी पिएं।",
+        emergency108:
+            "एम्बुलेंस",
 
-        awareness3Title: "शारीरिक गतिविधि",
-        awareness3Text: "उम्र के अनुसार नियमित शारीरिक गतिविधि स्वास्थ्य और सामान्य wellbeing में सहायता कर सकती है।",
+        childHelpline:
+            "बाल हेल्पलाइन",
 
-        awareness4Title: "अच्छी नींद",
-        awareness4Text: "नियमित नींद का समय रखें और शरीर को पर्याप्त आराम दें।",
+        medicalHelpline:
+            "स्वास्थ्य हेल्पलाइन",
 
-        awareness5Title: "नियमित जांच",
-        awareness5Text: "उचित स्वास्थ्य जांच करवाएं और आवश्यकता होने पर योग्य स्वास्थ्य विशेषज्ञ से सलाह लें।",
+        disclaimerTitle:
+            "महत्वपूर्ण सूचना",
 
-        awareness6Title: "खुद से निदान न करें",
-        awareness6Text: "ऑनलाइन जानकारी जागरूकता के लिए उपयोगी हो सकती है, लेकिन निदान योग्य स्वास्थ्य विशेषज्ञ द्वारा किया जाना चाहिए।",
+        disclaimerText:
+            "यह वेबसाइट केवल सामान्य स्वास्थ्य जानकारी और मार्गदर्शन प्रदान करती है। यह बीमारी का निदान नहीं करती और डॉक्टर की सलाह, निदान या उपचार का विकल्प नहीं है।",
 
-        tipTitle: "छोटी स्वस्थ आदतें महत्वपूर्ण हैं।",
-        tipText: "संतुलित आदतें बनाए रखें, असामान्य लक्षणों पर ध्यान दें और आवश्यकता होने पर विशेषज्ञ की सलाह लें।"
+        footerText:
+            "सामान्य स्वास्थ्य जागरूकता और मार्गदर्शन प्लेटफॉर्म।",
+
+        specialistPageTitle:
+            "सही विशेषज्ञ खोजें",
+
+        specialistPageText:
+            "अपने लक्षण चुनें और उपयुक्त चिकित्सा विशेषज्ञ के बारे में सामान्य मार्गदर्शन प्राप्त करें।",
+
+        selectSymptoms:
+            "अपने लक्षण चुनें",
+
+        selectSymptomsText:
+            "आप एक या अधिक लक्षण चुन सकते हैं।",
+
+        selected:
+            "चयनित",
+
+        guidanceNoteTitle:
+            "कृपया याद रखें",
+
+        guidanceNoteText:
+            "सुझाया गया विशेषज्ञ केवल आपके चुने हुए लक्षणों पर आधारित है। यह सामान्य मार्गदर्शन है, चिकित्सा निदान नहीं।",
+
+        facilityTitle:
+            "आपके लिए सुझाई गई स्वास्थ्य सुविधा",
+
+        facilityText:
+            "हम आपके स्थान और चुने गए लक्षणों के आधार पर एक उपयुक्त सुविधा की सिफारिश करते हैं।",
+
+        locationTitle:
+            "आपका स्थान",
+
+        locationWaiting:
+            "नजदीकी सुविधा खोजने के लिए स्थान की अनुमति आवश्यक है।",
+
+        useLocation:
+            "मेरा स्थान उपयोग करें",
+
+        findingFacility:
+            "उपयुक्त स्वास्थ्य सुविधा खोजी जा रही है...",
+
+        recommendationTitle:
+            "हम कैसे सिफारिश करते हैं",
+
+        recommendationText:
+            "सिस्टम लक्षण-विशेषज्ञ मिलान, अस्पताल की रेटिंग और दूरी को ध्यान में रखकर एक सिफारिश देता है।",
+
+        awarenessTitle:
+            "जानें। बचाव करें। स्वस्थ रहें।",
+
+        awarenessText:
+            "दैनिक स्वास्थ्य के लिए सरल स्वास्थ्य जागरूकता जानकारी।",
+
+        awareness1Title:
+            "स्वस्थ भोजन",
+
+        awareness1Text:
+            "अपने नियमित आहार में फल, सब्जियां, अनाज और अन्य पौष्टिक खाद्य पदार्थ शामिल करें।",
+
+        awareness2Title:
+            "पर्याप्त पानी",
+
+        awareness2Text:
+            "अपनी दैनिक जरूरत और गतिविधि के अनुसार पर्याप्त पानी पिएं।",
+
+        awareness3Title:
+            "शारीरिक गतिविधि",
+
+        awareness3Text:
+            "उम्र के अनुसार नियमित शारीरिक गतिविधि स्वास्थ्य और सामान्य wellbeing में सहायता कर सकती है।",
+
+        awareness4Title:
+            "अच्छी नींद",
+
+        awareness4Text:
+            "नियमित नींद का समय रखें और शरीर को पर्याप्त आराम दें।",
+
+        awareness5Title:
+            "नियमित जांच",
+
+        awareness5Text:
+            "उचित स्वास्थ्य जांच करवाएं और आवश्यकता होने पर योग्य स्वास्थ्य विशेषज्ञ से सलाह लें।",
+
+        awareness6Title:
+            "खुद से निदान न करें",
+
+        awareness6Text:
+            "ऑनलाइन जानकारी जागरूकता के लिए उपयोगी हो सकती है, लेकिन निदान योग्य स्वास्थ्य विशेषज्ञ द्वारा किया जाना चाहिए।",
+
+        tipTitle:
+            "छोटी स्वस्थ आदतें महत्वपूर्ण हैं।",
+
+        tipText:
+            "संतुलित आदतें बनाए रखें, असामान्य लक्षणों पर ध्यान दें और आवश्यकता होने पर विशेषज्ञ की सलाह लें।"
     },
 
+
+    /* =====================================================
+       MARATHI
+    ===================================================== */
 
     mr: {
 
@@ -230,103 +419,201 @@ const translations = {
         navFacilities: "जवळची सुविधा",
         navAwareness: "आरोग्य जागरूकता",
 
-        heroBadge: "स्मार्ट आरोग्य मार्गदर्शन",
-        heroTitle: "चांगल्या आरोग्यासाठी तुमचा मार्गदर्शक",
-        heroText: "तुमची लक्षणे निवडा आणि योग्य तज्ज्ञ तसेच जवळच्या आरोग्य सुविधेचे मार्गदर्शन मिळवा।",
+        heroBadge:
+            "स्मार्ट आरोग्य मार्गदर्शन",
 
-        findSpecialist: "तज्ज्ञ शोधा",
-        learnHealth: "आरोग्याबद्दल जाणून घ्या",
+        heroTitle:
+            "चांगल्या आरोग्यासाठी तुमचा मार्गदर्शक",
+
+        heroText:
+            "तुमची लक्षणे निवडा आणि योग्य तज्ज्ञ तसेच जवळच्या आरोग्य सुविधेचे मार्गदर्शन मिळवा.",
+
+        findSpecialist:
+            "तज्ज्ञ शोधा",
+
+        learnHealth:
+            "आरोग्याबद्दल जाणून घ्या",
 
         symptoms: "लक्षणे",
         specialists: "तज्ज्ञ",
         guidance: "मार्गदर्शन",
 
-        healthFirst: "तुमचे आरोग्य महत्त्वाचे आहे",
-        healthFirstText: "तुमची लक्षणे समजून घ्या आणि योग्य मार्गदर्शन मिळवा.",
+        healthFirst:
+            "तुमचे आरोग्य महत्त्वाचे आहे",
 
-        howTitle: "3 सोप्या टप्प्यांमध्ये आरोग्य मार्गदर्शन",
-        howText: "तुमची लक्षणे समजून घेण्यासाठी आणि योग्य आरोग्य मार्गदर्शन मिळवण्यासाठी सोपा मार्ग.",
+        healthFirstText:
+            "तुमची लक्षणे समजून घ्या आणि योग्य मार्गदर्शन मिळवा.",
 
-        step1Title: "लक्षणे निवडा",
-        step1Text: "तुम्हाला जाणवत असलेली लक्षणे निवडा.",
+        howTitle:
+            "3 सोप्या टप्प्यांमध्ये आरोग्य मार्गदर्शन",
 
-        step2Title: "तज्ज्ञ मार्गदर्शन",
-        step2Text: "योग्य वैद्यकीय तज्ज्ञाबद्दल सामान्य मार्गदर्शन मिळवा.",
+        howText:
+            "तुमची लक्षणे समजून घेण्यासाठी आणि योग्य आरोग्य मार्गदर्शन मिळवण्यासाठी सोपा मार्ग.",
 
-        step3Title: "जवळची सुविधा शोधा",
-        step3Text: "एक योग्य जवळची आरोग्य सुविधा सुचवली जाईल.",
+        step1Title:
+            "लक्षणे निवडा",
 
-        featureTitle: "सोप्या आरोग्य मार्गदर्शनासाठी तयार केलेले",
+        step1Text:
+            "तुम्हाला जाणवत असलेली लक्षणे निवडा.",
 
-        feature1Title: "लक्षण मार्गदर्शन",
-        feature1Text: "लक्षणे निवडा आणि योग्य तज्ज्ञाबद्दल मार्गदर्शन मिळवा.",
+        step2Title:
+            "तज्ज्ञ मार्गदर्शन",
 
-        feature2Title: "जवळची सुविधा",
-        feature2Text: "जवळची योग्य सुविधा शोधण्यासाठी तुमचे स्थान वापरा.",
+        step2Text:
+            "योग्य वैद्यकीय तज्ज्ञाबद्दल सामान्य मार्गदर्शन मिळवा.",
 
-        feature3Title: "स्मार्ट शिफारस",
-        feature3Text: "अनेक पर्यायांमुळे होणारा गोंधळ कमी करण्यासाठी एक शिफारस दिली जाते.",
+        step3Title:
+            "जवळची सुविधा शोधा",
 
-        feature4Title: "अनेक भाषा",
-        feature4Text: "वेबसाइट इंग्रजी, हिंदी किंवा मराठीमध्ये वापरा.",
+        step3Text:
+            "एक योग्य जवळची आरोग्य सुविधा सुचवली जाईल.",
 
-        emergencyTitle: "आपत्कालीन संपर्क",
-        emergencyText: "गंभीर किंवा आपत्कालीन परिस्थितीत त्वरित योग्य आपत्कालीन सेवेशी संपर्क साधा.",
+        featureTitle:
+            "सोप्या आरोग्य मार्गदर्शनासाठी तयार केलेले",
 
-        emergency112: "आपत्कालीन सेवा",
-        emergency108: "रुग्णवाहिका",
-        childHelpline: "बाल हेल्पलाइन",
-        medicalHelpline: "आरोग्य हेल्पलाइन",
+        feature1Title:
+            "लक्षण मार्गदर्शन",
 
-        disclaimerTitle: "महत्त्वाची सूचना",
-        disclaimerText: "ही वेबसाइट फक्त सामान्य आरोग्य माहिती आणि मार्गदर्शन देते. ती कोणत्याही आजाराचे निदान करत नाही आणि डॉक्टरांच्या सल्ल्याचा किंवा उपचाराचा पर्याय नाही.",
+        feature1Text:
+            "लक्षणे निवडा आणि योग्य तज्ज्ञाबद्दल मार्गदर्शन मिळवा.",
 
-        footerText: "सामान्य आरोग्य जागरूकता आणि मार्गदर्शन प्लॅटफॉर्म.",
+        feature2Title:
+            "जवळची सुविधा",
 
-        specialistPageTitle: "योग्य तज्ज्ञ शोधा",
-        specialistPageText: "तुमची लक्षणे निवडा आणि योग्य वैद्यकीय तज्ज्ञाबद्दल सामान्य मार्गदर्शन मिळवा.",
+        feature2Text:
+            "जवळची योग्य सुविधा शोधण्यासाठी तुमचे स्थान वापरा.",
 
-        selectSymptoms: "तुमची लक्षणे निवडा",
-        selectSymptomsText: "तुम्ही एक किंवा अधिक लक्षणे निवडू शकता.",
-        selected: "निवडले",
+        feature3Title:
+            "स्मार्ट शिफारस",
 
-        guidanceNoteTitle: "कृपया लक्षात ठेवा",
-        guidanceNoteText: "सुचवलेला तज्ज्ञ फक्त तुम्ही निवडलेल्या लक्षणांवर आधारित आहे. हे सामान्य मार्गदर्शन आहे, वैद्यकीय निदान नाही.",
+        feature3Text:
+            "अनेक पर्यायांमुळे होणारा गोंधळ कमी करण्यासाठी एक शिफारस दिली जाते.",
 
-        facilityTitle: "तुमच्यासाठी सुचवलेली आरोग्य सुविधा",
-        facilityText: "तुमचे स्थान आणि निवडलेल्या लक्षणांच्या आधारावर एक योग्य सुविधा सुचवली जाते.",
+        feature4Title:
+            "अनेक भाषा",
 
-        locationTitle: "तुमचे स्थान",
-        locationWaiting: "जवळची सुविधा शोधण्यासाठी स्थानाची परवानगी आवश्यक आहे.",
-        useLocation: "माझे स्थान वापरा",
-        findingFacility: "योग्य आरोग्य सुविधा शोधत आहे...",
+        feature4Text:
+            "वेबसाइट इंग्रजी, हिंदी किंवा मराठीमध्ये वापरा.",
 
-        recommendationTitle: "आम्ही कशी शिफारस करतो",
-        recommendationText: "सिस्टम लक्षण-तज्ज्ञ जुळणी, रेटिंग आणि अंतर लक्षात घेऊन एक शिफारस देते.",
+        emergencyTitle:
+            "आपत्कालीन संपर्क",
 
-        awarenessTitle: "जाणून घ्या. प्रतिबंध करा. निरोगी राहा.",
-        awarenessText: "दररोजच्या आरोग्यासाठी सोपी आरोग्य जागरूकता माहिती.",
+        emergencyText:
+            "गंभीर किंवा आपत्कालीन परिस्थितीत त्वरित योग्य आपत्कालीन सेवेशी संपर्क साधा.",
 
-        awareness1Title: "निरोगी आहार",
-        awareness1Text: "तुमच्या नियमित आहारात फळे, भाज्या, धान्य आणि इतर पौष्टिक पदार्थांचा समावेश करा.",
+        emergency112:
+            "आपत्कालीन सेवा",
 
-        awareness2Title: "पुरेसे पाणी",
-        awareness2Text: "तुमच्या दैनंदिन गरजेनुसार आणि हालचालीनुसार पुरेसे पाणी प्या.",
+        emergency108:
+            "रुग्णवाहिका",
 
-        awareness3Title: "शारीरिक हालचाल",
-        awareness3Text: "वयानुसार नियमित शारीरिक हालचाल आरोग्य आणि सामान्य wellbeing साठी उपयुक्त ठरू शकते.",
+        childHelpline:
+            "बाल हेल्पलाइन",
 
-        awareness4Title: "चांगली झोप",
-        awareness4Text: "नियमित झोपेची वेळ ठेवा आणि शरीराला पुरेशी विश्रांती द्या.",
+        medicalHelpline:
+            "आरोग्य हेल्पलाइन",
 
-        awareness5Title: "नियमित तपासणी",
-        awareness5Text: "योग्य आरोग्य तपासणी करा आणि गरज असल्यास पात्र आरोग्य तज्ज्ञांचा सल्ला घ्या.",
+        disclaimerTitle:
+            "महत्त्वाची सूचना",
 
-        awareness6Title: "स्वतः निदान करू नका",
-        awareness6Text: "ऑनलाइन माहिती जागरूकतेसाठी उपयुक्त असू शकते, परंतु निदान पात्र आरोग्य तज्ज्ञाने करावे.",
+        disclaimerText:
+            "ही वेबसाइट फक्त सामान्य आरोग्य माहिती आणि मार्गदर्शन देते. ती कोणत्याही आजाराचे निदान करत नाही आणि डॉक्टरांच्या सल्ल्याचा किंवा उपचाराचा पर्याय नाही.",
 
-        tipTitle: "लहान आरोग्यदायी सवयी महत्त्वाच्या आहेत.",
-        tipText: "संतुलित सवयी ठेवा, असामान्य लक्षणांकडे लक्ष द्या आणि गरज असल्यास तज्ज्ञांचा सल्ला घ्या."
+        footerText:
+            "सामान्य आरोग्य जागरूकता आणि मार्गदर्शन प्लॅटफॉर्म.",
+
+        specialistPageTitle:
+            "योग्य तज्ज्ञ शोधा",
+
+        specialistPageText:
+            "तुमची लक्षणे निवडा आणि योग्य वैद्यकीय तज्ज्ञाबद्दल सामान्य मार्गदर्शन मिळवा.",
+
+        selectSymptoms:
+            "तुमची लक्षणे निवडा",
+
+        selectSymptomsText:
+            "तुम्ही एक किंवा अधिक लक्षणे निवडू शकता.",
+
+        selected:
+            "निवडले",
+
+        guidanceNoteTitle:
+            "कृपया लक्षात ठेवा",
+
+        guidanceNoteText:
+            "सुचवलेला तज्ज्ञ फक्त तुम्ही निवडलेल्या लक्षणांवर आधारित आहे. हे सामान्य मार्गदर्शन आहे, वैद्यकीय निदान नाही.",
+
+        facilityTitle:
+            "तुमच्यासाठी सुचवलेली आरोग्य सुविधा",
+
+        facilityText:
+            "तुमचे स्थान आणि निवडलेल्या लक्षणांच्या आधारावर एक योग्य सुविधा सुचवली जाते.",
+
+        locationTitle:
+            "तुमचे स्थान",
+
+        locationWaiting:
+            "जवळची सुविधा शोधण्यासाठी स्थानाची परवानगी आवश्यक आहे.",
+
+        useLocation:
+            "माझे स्थान वापरा",
+
+        findingFacility:
+            "योग्य आरोग्य सुविधा शोधत आहे...",
+
+        recommendationTitle:
+            "आम्ही कशी शिफारस करतो",
+
+        recommendationText:
+            "सिस्टम लक्षण-तज्ज्ञ जुळणी, रेटिंग आणि अंतर लक्षात घेऊन एक शिफारस देते.",
+
+        awarenessTitle:
+            "जाणून घ्या. प्रतिबंध करा. निरोगी राहा.",
+
+        awarenessText:
+            "दररोजच्या आरोग्यासाठी सोपी आरोग्य जागरूकता माहिती.",
+
+        awareness1Title:
+            "निरोगी आहार",
+
+        awareness1Text:
+            "तुमच्या नियमित आहारात फळे, भाज्या, धान्य आणि इतर पौष्टिक पदार्थांचा समावेश करा.",
+
+        awareness2Title:
+            "पुरेसे पाणी",
+
+        awareness2Text:
+            "तुमच्या दैनंदिन गरजेनुसार आणि हालचालीनुसार पुरेसे पाणी प्या.",
+
+        awareness3Title:
+            "शारीरिक हालचाल",
+
+        awareness3Text:
+            "वयानुसार नियमित शारीरिक हालचाल आरोग्य आणि सामान्य wellbeing साठी उपयुक्त ठरू शकते.",
+
+        awareness4Title:
+            "चांगली झोप",
+
+        awareness4Text:
+            "नियमित झोपेची वेळ ठेवा आणि शरीराला पुरेशी विश्रांती द्या.",
+
+        awareness5Title:
+            "नियमित तपासणी",
+
+        awareness5Text:
+            "योग्य आरोग्य तपासणी करा आणि गरज असल्यास पात्र आरोग्य तज्ज्ञांचा सल्ला घ्या.",
+
+        awareness6Title:
+            "स्वतः निदान करू नका",
+
+        awareness6Text:
+            "ऑनलाइन माहिती जागरूकतेसाठी उपयुक्त असू शकते, परंतु निदान पात्र आरोग्य तज्ज्ञाने करावे.",
+
+        tipTitle:
+            "लहान आरोग्यदायी सवयी महत्त्वाच्या आहेत.",
+
+        tipText:
+            "संतुलित सवयी ठेवा, असामान्य लक्षणांकडे लक्ष द्या आणि गरज असल्यास तज्ज्ञांचा सल्ला घ्या."
     }
 };
 
@@ -668,38 +955,118 @@ const specialistInfo = {
 
 const symptomSpecialists = {
 
-    fever: ["General Physician"],
-    headache: ["General Physician", "Neurologist"],
-    fatigue: ["General Physician"],
-    weakness: ["General Physician"],
-    "body-pain": ["General Physician"],
-    dizziness: ["General Physician", "Neurologist"],
+    fever: [
+        "General Physician"
+    ],
 
-    cough: ["General Physician"],
-    cold: ["General Physician", "ENT Specialist"],
-    "sore-throat": ["ENT Specialist", "General Physician"],
-    "runny-nose": ["ENT Specialist", "General Physician"],
-    "blocked-nose": ["ENT Specialist"],
-    "breathing-difficulty": ["Pulmonologist"],
-    wheezing: ["Pulmonologist"],
+    headache: [
+        "General Physician",
+        "Neurologist"
+    ],
 
-    "stomach-pain": ["Gastroenterologist"],
-    nausea: ["Gastroenterologist"],
-    vomiting: ["Gastroenterologist"],
-    constipation: ["Gastroenterologist"],
-    diarrhea: ["Gastroenterologist"],
+    fatigue: [
+        "General Physician"
+    ],
 
-    "skin-rash": ["Dermatologist"],
-    itching: ["Dermatologist"],
-    acne: ["Dermatologist"],
+    weakness: [
+        "General Physician"
+    ],
 
-    "joint-pain": ["Orthopedic Specialist"],
-    "back-pain": ["Orthopedic Specialist"],
-    "knee-pain": ["Orthopedic Specialist"],
+    "body-pain": [
+        "General Physician"
+    ],
 
-    toothache: ["Dentist"],
-    "gum-pain": ["Dentist"],
-    "tooth-sensitivity": ["Dentist"]
+    dizziness: [
+        "General Physician",
+        "Neurologist"
+    ],
+
+    cough: [
+        "General Physician"
+    ],
+
+    cold: [
+        "General Physician",
+        "ENT Specialist"
+    ],
+
+    "sore-throat": [
+        "ENT Specialist",
+        "General Physician"
+    ],
+
+    "runny-nose": [
+        "ENT Specialist",
+        "General Physician"
+    ],
+
+    "blocked-nose": [
+        "ENT Specialist"
+    ],
+
+    "breathing-difficulty": [
+        "Pulmonologist"
+    ],
+
+    wheezing: [
+        "Pulmonologist"
+    ],
+
+    "stomach-pain": [
+        "Gastroenterologist"
+    ],
+
+    nausea: [
+        "Gastroenterologist"
+    ],
+
+    vomiting: [
+        "Gastroenterologist"
+    ],
+
+    constipation: [
+        "Gastroenterologist"
+    ],
+
+    diarrhea: [
+        "Gastroenterologist"
+    ],
+
+    "skin-rash": [
+        "Dermatologist"
+    ],
+
+    itching: [
+        "Dermatologist"
+    ],
+
+    acne: [
+        "Dermatologist"
+    ],
+
+    "joint-pain": [
+        "Orthopedic Specialist"
+    ],
+
+    "back-pain": [
+        "Orthopedic Specialist"
+    ],
+
+    "knee-pain": [
+        "Orthopedic Specialist"
+    ],
+
+    toothache: [
+        "Dentist"
+    ],
+
+    "gum-pain": [
+        "Dentist"
+    ],
+
+    "tooth-sensitivity": [
+        "Dentist"
+    ]
 };
 
 
@@ -709,7 +1076,9 @@ const symptomSpecialists = {
 
 const symptomCategories = {
 
-    all: symptoms.map(item => item.id),
+    all: symptoms.map(
+        symptom => symptom.id
+    ),
 
     general: [
         "fever",
@@ -759,7 +1128,7 @@ const symptomCategories = {
 
 
 /* =========================================================
-   DEMO HOSPITAL DATA
+   HOSPITAL DATA
 ========================================================= */
 
 const hospitals = [
@@ -771,7 +1140,7 @@ const hospitals = [
         lng: 73.8567,
         rating: 4.8,
         doctor: "Dr. Aarav Patil",
-        phone: "9000000001",
+        phone: "9890588303",
         specialist: "General Physician"
     },
 
@@ -782,7 +1151,7 @@ const hospitals = [
         lng: 73.8446,
         rating: 4.9,
         doctor: "Dr. Riya Joshi",
-        phone: "9000000002",
+        phone: "8460401655",
         specialist: "Dentist"
     },
 
@@ -793,18 +1162,18 @@ const hospitals = [
         lng: 73.8077,
         rating: 4.7,
         doctor: "Dr. Neha Kulkarni",
-        phone: "9000000003",
+        phone: "8484989782",
         specialist: "ENT Specialist"
     },
 
     {
-        name: "Respira Care Hospital - Pune",
+        name: "Respiratory Care Hospital - Pune",
         city: "Pune",
         lat: 18.5000,
         lng: 73.9200,
         rating: 4.6,
         doctor: "Dr. Meera Deshmukh",
-        phone: "9000000005",
+        phone: "9175333566",
         specialist: "Pulmonologist"
     },
 
@@ -815,7 +1184,7 @@ const hospitals = [
         lng: 73.8300,
         rating: 4.9,
         doctor: "Dr. Karan Mehta",
-        phone: "9000000006",
+        phone: "9822399108",
         specialist: "Cardiologist"
     },
 
@@ -826,7 +1195,7 @@ const hospitals = [
         lng: 73.8100,
         rating: 4.7,
         doctor: "Dr. Priya Nair",
-        phone: "9000000007",
+        phone: "9881123006",
         specialist: "Gastroenterologist"
     },
 
@@ -837,7 +1206,7 @@ const hospitals = [
         lng: 73.8500,
         rating: 4.8,
         doctor: "Dr. Isha More",
-        phone: "9000000008",
+        phone: "8552906319",
         specialist: "Dermatologist"
     },
 
@@ -848,7 +1217,7 @@ const hospitals = [
         lng: 73.8700,
         rating: 4.7,
         doctor: "Dr. Rahul Jadhav",
-        phone: "9000000009",
+        phone: "8888788880",
         specialist: "Orthopedic Specialist"
     },
 
@@ -859,7 +1228,7 @@ const hospitals = [
         lng: 73.8500,
         rating: 4.8,
         doctor: "Dr. Sneha Rao",
-        phone: "9000000010",
+        phone: "9156170951",
         specialist: "Ophthalmologist"
     },
 
@@ -870,7 +1239,7 @@ const hospitals = [
         lng: 73.8600,
         rating: 4.9,
         doctor: "Dr. Ananya Joshi",
-        phone: "9000000011",
+        phone: "9053108108",
         specialist: "Pediatrician"
     },
 
@@ -881,160 +1250,143 @@ const hospitals = [
         lng: 73.8200,
         rating: 4.8,
         doctor: "Dr. Kavita Patil",
-        phone: "9000000012",
+        phone: "7507890909",
         specialist: "Gynecologist"
     },
 
     {
         name: "Ruby Hall Clinic - Hinjawadi",
-        city:  "Pune",
-        lat:18.591,
-        lng:73.737,
-        rating:	3.8/5,
-        doctor:"Dr. Swaraj Sathe",	
-        phone:"020-6699-9999",	
-        specialist:"Orthopedic Surgeon"
-    },
-
-    {
-        name:"LifeTree Hospital	Pune",
-        city:"Pune",
-        lat: 18.598,
-        lng:73.738,
-        rating:4.5/5,
-        doctor:"Dr. Amol L. Dange",
-        phone:"08530220401",
-        specialist:"Internal Medicine / Diabetology"
-    },
-
-    {
-
-        name:"Sanjeevani Multispeciality Hospital	Pune",
-        city:"Pune",
-        lat: 18.591370,
-        lng:73.739603,
-        rating:4.1/5,
-        doctor:"Dr. Swapnil Birajdar",
-        phone:"09970716568",
-        specialist:"General Physician / Intensive Care"
-    },
-
-    {
-
-        name:"Hinjawadi Superspeciality Hospital – Advanced ICU & Multispeciality Care, Pune",
-        city:"Pune",
-        lat: 18.598,
-        lng:73.735	,
-        rating:4.7/5,
-        doctor:"Dr. Ankit Khanna",
-        phone:"07263041111",
-        specialist:"Dental"
-    },
-
-    {
-
-        name:"Akshaya Hospital MOTHER & CHILD CARE HOSPITAL	Pune",
-        city:"Pune",
+        city: "Pune",
         lat: 18.591,
-        lng:73.739,
-        rating:4.5/5,
-        phone:"08149396005",
-        specialist:"Mother & Child Care"
+        lng: 73.737,
+        rating: 3.8,
+        doctor: "Dr. Swaraj Sathe",
+        phone: "020-6699-9999",
+        specialist: "Orthopedic Surgeon"
     },
 
     {
+        name: "LifeTree Hospital Pune",
+        city: "Pune",
+        lat: 18.598,
+        lng: 73.738,
+        rating: 4.5,
+        doctor: "Dr. Amol L. Dange",
+        phone: "08530220401",
+        specialist: "Internal Medicine / Diabetology"
+    },
 
-        name:"MEDURAA MULTISPECIALITY HOSPITAL	Pune",
-        city:"Pune",
+    {
+        name: "Sanjeevani Multispeciality Hospital Pune",
+        city: "Pune",
+        lat: 18.591370,
+        lng: 73.739603,
+        rating: 4.1,
+        doctor: "Dr. Swapnil Birajdar",
+        phone: "09970716568",
+        specialist: "General Physician / Intensive Care"
+    },
+
+    {
+        name: "Hinjawadi Superspeciality Hospital - Advanced ICU & Multispeciality Care, Pune",
+        city: "Pune",
+        lat: 18.598,
+        lng: 73.735,
+        rating: 4.7,
+        doctor: "Dr. Ankit Khanna",
+        phone: "07263041111",
+        specialist: "Dental"
+    },
+
+    {
+        name: "Akshaya Hospital MOTHER & CHILD CARE HOSPITAL Pune",
+        city: "Pune",
+        lat: 18.591,
+        lng: 73.739,
+        rating: 4.5,
+        doctor: "",
+        phone: "08149396005",
+        specialist: "Mother & Child Care"
+    },
+
+    {
+        name: "MEDURAA MULTISPECIALITY HOSPITAL Pune",
+        city: "Pune",
         lat: 18.596,
-        lng:73.737,
-        rating:4.2/5,
-        phone:"09112012012",
-        specialist:"Multispeciality"
+        lng: 73.737,
+        rating: 4.2,
+        doctor: "",
+        phone: "09112012012",
+        specialist: "Multispeciality"
     },
 
     {
-
-        name:"Pentagon Hospital - Multispeciality Hospital in Wakad	Pune",
-        city:"Pune",
+        name: "Pentagon Hospital - Multispeciality Hospital in Wakad Pune",
+        city: "Pune",
         lat: 18.5990,
-        lng:73.7650,
-        rating:4.7/5,
-        phone:"91 96072 60202"
+        lng: 73.7650,
+        rating: 4.7,
+        doctor: "",
+        phone: "9607260202",
+        specialist: "General Physician"
     },
 
     {
-
-        name:"Asian Pacific Superspeciality Hospital & Research Center - Hinjewadi	Pune",
-        city:"Pune",
+        name: "Asian Pacific Superspeciality Hospital & Research Center - Hinjewadi Pune",
+        city: "Pune",
         lat: 18.5920,
-        lng:73.7340,
-        rating:4.7/5,
-        phone:"91 90900 22033"
+        lng: 73.7340,
+        rating: 4.7,
+        doctor: "",
+        phone: "9090022033",
+        specialist: "General Physician"
     },
 
     {
-
-        name:"Ashirwad Accident And General Hospital	Pune",
-        city:"Pune",
+        name: "Ashirwad Accident And General Hospital Pune",
+        city: "Pune",
         lat: 18.5940,
-        lng:73.7500,
-        rating:4.8/5,
-        phone:"+91 92263 95098"
-    },
-
-    {
-
-        name:"Balaji Hospital	Pune",
-        city:"Pune",
-        lat: 18.5920,
-        lng:73.7380,
-        rating:5.0/5,
-        phone:"+91 87886 45027"
-    },
-
-    {
-
-        name:"Dr.Ranjeet Hospital	Pune",
-        city:"Pune",
-        lat: 18.5950,
-        lng:73.7340,
-        rating:4.3/5,
-        phone:"+91 97628 18734"
-    },
-
-    {
-
-        name:"Kaushalya Hospital	Pune",
-        city:"Pune",
-        lat: 18.5920,
-        lng:73.7350,
-        rating:4.7/5,
-        phone:"+91 83296 67895"
-    },
-
-    {
-
-        name:"Dr Chaudhari’s Shree Hospital	Pune",
-        city:"Pune",
-        lat: 18.5950,
-        lng:73.7350,
-        rating:4.8/5,
-        phone:"+91 77093 61706"
-    },
-
-    {
-
-        name:"Akshaya Hospital MOTHER & CHILD CARE HOSPITAL	Pune",
-        city:"",
-        lat: 18.5910,
-        lng:73.7380,
-        rating:4.5/5,
-        phone:"+91 81493 96005",
+        lng: 73.7500,
+        rating: 4.8,
+        doctor: "",
+        phone: "9226395098",
+        specialist: "General Physician"
     },
 
     
-    /* Ahilyanagar demo data */
+
+    {
+        name: "Dr. Ranjeet Hospital Pune",
+        city: "Pune",
+        lat: 18.5950,
+        lng: 73.7340,
+        rating: 4.3,
+        doctor: "",
+        phone: "9762818734",
+        specialist: "General Physician"
+    },
+
+    {
+        name: "Kaushalya Hospital Pune",
+        city: "Pune",
+        lat: 18.5920,
+        lng: 73.7350,
+        rating: 4.7,
+        doctor: "",
+        phone: "8329667895",
+        specialist: "General Physician"
+    },
+
+    {
+        name: "Dr Chaudhari's Shree Hospital Pune",
+        city: "Pune",
+        lat: 18.5950,
+        lng: 73.7350,
+        rating: 4.8,
+        doctor: "",
+        phone: "7709361706",
+        specialist: "General Physician"
+    },
 
     {
         name: "CityCare General Hospital - Ahilyanagar",
@@ -1091,95 +1443,196 @@ let currentLanguage =
 
 let selectedSymptoms = [];
 
+let lastUserLocation = null;
+
 
 /* =========================================================
-   LANGUAGE
+   LANGUAGE SETUP
 ========================================================= */
 
 function setupLanguage() {
 
-    const select = document.querySelector("#languageSelect");
+    const select =
+        document.querySelector(
+            "#languageSelect"
+        );
 
     if (!select) return;
 
-    select.value = currentLanguage;
 
-    select.addEventListener("change", function () {
+    select.value =
+        currentLanguage;
 
-        currentLanguage = this.value;
 
-        localStorage.setItem(
-            "language",
-            currentLanguage
-        );
+    select.addEventListener(
+        "change",
+        function () {
 
-        applyTranslations();
+            currentLanguage =
+                this.value;
 
-        if (document.querySelector("#symptomsGrid")) {
-            renderSymptoms();
+
+            localStorage.setItem(
+                "language",
+                currentLanguage
+            );
+
+
+            applyTranslations();
+
+
+            /*
+               Re-render symptoms after
+               language change.
+            */
+
+            if (
+                document.querySelector(
+                    "#symptomsGrid"
+                )
+            ) {
+
+                const activeCategory =
+                    document.querySelector(
+                        ".category-btn.active"
+                    );
+
+
+                renderSymptoms(
+                    activeCategory
+                        ? activeCategory.getAttribute(
+                            "data-category"
+                        )
+                        : "all"
+                );
+
+            }
+
+
+            /*
+               Re-render recommendation
+               after language change.
+            */
+
+            if (
+                document.querySelector(
+                    "#facilitiesContainer"
+                )
+            ) {
+
+                if (lastUserLocation) {
+
+                    showRecommendedHospital(
+                        lastUserLocation.lat,
+                        lastUserLocation.lng
+                    );
+
+                } else if (
+                    localStorage.getItem(
+                        "selectedSpecialists"
+                    )
+                ) {
+
+                    showWithoutLocation();
+
+                }
+
+            }
+
         }
+    );
 
-    });
-}
-
-
-function applyTranslations() {
-
-    const elements =
-        document.querySelectorAll("[data-i18n]");
-
-    elements.forEach(element => {
-
-        const key =
-            element.getAttribute("data-i18n");
-
-        if (
-            translations[currentLanguage] &&
-            translations[currentLanguage][key]
-        ) {
-
-            element.textContent =
-                translations[currentLanguage][key];
-
-        }
-
-    });
 }
 
 
 /* =========================================================
-   SPECIALIST PAGE
+   APPLY TRANSLATIONS
+========================================================= */
+
+function applyTranslations() {
+
+    const elements =
+        document.querySelectorAll(
+            "[data-i18n]"
+        );
+
+
+    elements.forEach(
+        element => {
+
+            const key =
+                element.getAttribute(
+                    "data-i18n"
+                );
+
+
+            if (
+                translations[currentLanguage] &&
+                translations[currentLanguage][key] !==
+                    undefined
+            ) {
+
+                element.textContent =
+                    translations[
+                        currentLanguage
+                    ][key];
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   INITIALIZE SPECIALIST PAGE
 ========================================================= */
 
 function initializeSpecialistPage() {
 
     const grid =
-        document.querySelector("#symptomsGrid");
+        document.querySelector(
+            "#symptomsGrid"
+        );
+
 
     if (!grid) return;
 
 
     /*
-       Clear old selections.
-       This prevents old localStorage data
-       from showing unwanted selected symptoms.
+       Clear previous selection when
+       opening specialist page.
     */
 
     selectedSymptoms = [];
 
-    localStorage.removeItem("selectedSymptoms");
-    localStorage.removeItem("selectedSpecialists");
+
+    localStorage.removeItem(
+        "selectedSymptoms"
+    );
+
+    localStorage.removeItem(
+        "selectedSpecialists"
+    );
 
 
-    renderSymptoms();
+    renderSymptoms(
+        "all"
+    );
 
-    updateSelectedCount();
 
     setupSymptomCategories();
 
 
+    updateSelectedCount();
+
+
     const findButton =
-        document.querySelector("#findSpecialistBtn");
+        document.querySelector(
+            "#findSpecialistBtn"
+        );
+
 
     if (findButton) {
 
@@ -1197,96 +1650,145 @@ function initializeSpecialistPage() {
    RENDER SYMPTOMS
 ========================================================= */
 
-function renderSymptoms(category = "all") {
+function renderSymptoms(
+    category = "all"
+) {
 
     const grid =
-        document.querySelector("#symptomsGrid");
+        document.querySelector(
+            "#symptomsGrid"
+        );
+
 
     if (!grid) return;
 
 
     const ids =
-        symptomCategories[category] ||
+        symptomCategories[
+            category
+        ] ||
         symptomCategories.all;
 
 
     const filteredSymptoms =
-        symptoms.filter(item =>
-            ids.includes(item.id)
+        symptoms.filter(
+            symptom =>
+                ids.includes(
+                    symptom.id
+                )
         );
 
 
     grid.innerHTML = "";
 
 
-    filteredSymptoms.forEach(symptom => {
+    filteredSymptoms.forEach(
+        symptom => {
 
-        const label =
-            document.createElement("label");
-
-        label.className = "symptom-item";
-
-
-        const checkbox =
-            document.createElement("input");
-
-        checkbox.type = "checkbox";
-
-        checkbox.value = symptom.id;
-
-        checkbox.checked =
-            selectedSymptoms.includes(
-                symptom.id
-            );
+            const label =
+                document.createElement(
+                    "label"
+                );
 
 
-        checkbox.addEventListener(
-            "change",
-            function () {
+            label.className =
+                "symptom-item";
 
-                if (this.checked) {
+
+            const checkbox =
+                document.createElement(
+                    "input"
+                );
+
+
+            checkbox.type =
+                "checkbox";
+
+
+            checkbox.value =
+                symptom.id;
+
+
+            checkbox.checked =
+                selectedSymptoms.includes(
+                    symptom.id
+                );
+
+
+            checkbox.addEventListener(
+                "change",
+                function () {
 
                     if (
-                        !selectedSymptoms.includes(
-                            symptom.id
-                        )
+                        this.checked
                     ) {
 
-                        selectedSymptoms.push(
-                            symptom.id
-                        );
+                        if (
+                            !selectedSymptoms.includes(
+                                symptom.id
+                            )
+                        ) {
+
+                            selectedSymptoms.push(
+                                symptom.id
+                            );
+
+                        }
+
+                    } else {
+
+                        selectedSymptoms =
+                            selectedSymptoms.filter(
+                                id =>
+                                    id !==
+                                    symptom.id
+                            );
 
                     }
 
-                } else {
 
-                    selectedSymptoms =
-                        selectedSymptoms.filter(
-                            id => id !== symptom.id
-                        );
+                    localStorage.setItem(
+                        "selectedSymptoms",
+                        JSON.stringify(
+                            selectedSymptoms
+                        )
+                    );
+
+
+                    updateSelectedCount();
 
                 }
-
-                updateSelectedCount();
-
-            }
-        );
+            );
 
 
-        const text =
-            document.createElement("span");
+            const text =
+                document.createElement(
+                    "span"
+                );
 
-        text.textContent =
-            symptom.name[currentLanguage];
+
+            text.textContent =
+                symptom.name[
+                    currentLanguage
+                ];
 
 
-        label.appendChild(checkbox);
+            label.appendChild(
+                checkbox
+            );
 
-        label.appendChild(text);
 
-        grid.appendChild(label);
+            label.appendChild(
+                text
+            );
 
-    });
+
+            grid.appendChild(
+                label
+            );
+
+        }
+    );
 
 
     updateSelectedCount();
@@ -1295,7 +1797,7 @@ function renderSymptoms(category = "all") {
 
 
 /* =========================================================
-   CATEGORY FILTER
+   CATEGORY BUTTONS
 ========================================================= */
 
 function setupSymptomCategories() {
@@ -1305,34 +1807,46 @@ function setupSymptomCategories() {
             ".category-btn"
         );
 
+
     if (!buttons.length) return;
 
 
-    buttons.forEach(button => {
+    buttons.forEach(
+        button => {
 
-        button.addEventListener(
-            "click",
-            function () {
+            button.addEventListener(
+                "click",
+                function () {
 
-                buttons.forEach(btn =>
-                    btn.classList.remove("active")
-                );
-
-                this.classList.add("active");
-
-
-                const category =
-                    this.getAttribute(
-                        "data-category"
+                    buttons.forEach(
+                        btn =>
+                            btn.classList.remove(
+                                "active"
+                            )
                     );
 
 
-                renderSymptoms(category);
+                    this.classList.add(
+                        "active"
+                    );
 
-            }
-        );
 
-    });
+                    const category =
+                        this.getAttribute(
+                            "data-category"
+                        );
+
+
+                    renderSymptoms(
+                        category ||
+                        "all"
+                    );
+
+                }
+            );
+
+        }
+    );
 
 }
 
@@ -1347,6 +1861,7 @@ function updateSelectedCount() {
         document.querySelector(
             "#selectedCount"
         );
+
 
     if (counter) {
 
@@ -1364,21 +1879,30 @@ function updateSelectedCount() {
 
 function handleFindSpecialist() {
 
-    if (!selectedSymptoms.length) {
+    if (
+        !selectedSymptoms.length
+    ) {
 
         alert(
+
             currentLanguage === "hi"
+
                 ? "कृपया कम से कम एक लक्षण चुनें।"
+
                 : currentLanguage === "mr"
+
                     ? "कृपया किमान एक लक्षण निवडा."
+
                     : "Please select at least one symptom."
+
         );
 
         return;
+
     }
 
 
-    let specialistScores = {};
+    const specialistScores = {};
 
 
     selectedSymptoms.forEach(
@@ -1421,19 +1945,23 @@ function handleFindSpecialist() {
         Object.entries(
             specialistScores
         ).sort(
-            (a, b) => b[1] - a[1]
+            (a, b) =>
+                b[1] - a[1]
         );
 
 
     const recommendedSpecialists =
         sorted.map(
-            item => item[0]
+            item =>
+                item[0]
         );
 
 
     localStorage.setItem(
         "selectedSymptoms",
-        JSON.stringify(selectedSymptoms)
+        JSON.stringify(
+            selectedSymptoms
+        )
     );
 
 
@@ -1462,26 +1990,48 @@ function calculateDistance(
     lon2
 ) {
 
-    const R = 6371;
+    const R =
+        6371;
+
 
     const dLat =
         (lat2 - lat1) *
-        Math.PI / 180;
+        Math.PI /
+        180;
+
 
     const dLon =
         (lon2 - lon1) *
-        Math.PI / 180;
+        Math.PI /
+        180;
 
 
     const a =
-        Math.sin(dLat / 2) *
-        Math.sin(dLat / 2) +
+        Math.sin(
+            dLat / 2
+        ) *
+        Math.sin(
+            dLat / 2
+        ) +
 
-        Math.cos(lat1 * Math.PI / 180) *
-        Math.cos(lat2 * Math.PI / 180) *
+        Math.cos(
+            lat1 *
+            Math.PI /
+            180
+        ) *
 
-        Math.sin(dLon / 2) *
-        Math.sin(dLon / 2);
+        Math.cos(
+            lat2 *
+            Math.PI /
+            180
+        ) *
+
+        Math.sin(
+            dLon / 2
+        ) *
+        Math.sin(
+            dLon / 2
+        );
 
 
     const c =
@@ -1493,11 +2043,206 @@ function calculateDistance(
 
 
     return R * c;
+
 }
 
 
 /* =========================================================
-   FIND BEST HOSPITAL
+   RATING CONVERSION
+========================================================= */
+
+function getNumericRating(
+    value
+) {
+
+    if (
+        typeof value ===
+        "number"
+    ) {
+
+        return value;
+
+    }
+
+
+    const match =
+        String(
+            value || ""
+        )
+            .replace(
+                /,/g,
+                ""
+            )
+            .match(
+                /\d+(?:\.\d+)?/
+            );
+
+
+    return match
+        ? Number(
+            match[0]
+        )
+        : 0;
+
+}
+
+
+/* =========================================================
+   HOSPITAL SPECIALIST MATCHING
+========================================================= */
+
+function hospitalMatchesSpecialist(
+    hospital,
+    specialist
+) {
+
+    const hospitalText =
+        String(
+            hospital.specialist ||
+            ""
+        )
+            .toLowerCase()
+            .trim();
+
+
+    const required =
+        String(
+            specialist ||
+            ""
+        )
+            .toLowerCase()
+            .trim();
+
+
+    if (
+        !hospitalText ||
+        !required
+    ) {
+
+        return false;
+
+    }
+
+
+    /*
+       Direct match
+    */
+
+    if (
+        hospitalText.includes(
+            required
+        )
+    ) {
+
+        return true;
+
+    }
+
+
+    /*
+       Alias matching
+    */
+
+    const aliases = {
+
+        "general physician": [
+            "general physician",
+            "internal medicine",
+            "general medicine",
+            "physician",
+            "diabetology",
+            "intensive care"
+        ],
+
+        "dentist": [
+            "dentist",
+            "dental"
+        ],
+
+        "orthopedic specialist": [
+            "orthopedic",
+            "orthopaedic",
+            "orthopedic surgeon",
+            "orthopaedic surgeon"
+        ],
+
+        "ent specialist": [
+            "ent",
+            "ear nose throat",
+            "otolaryng"
+        ],
+
+        "pulmonologist": [
+            "pulmonologist",
+            "pulmonary",
+            "respiratory"
+        ],
+
+        "cardiologist": [
+            "cardiologist",
+            "cardiac",
+            "heart"
+        ],
+
+        "gastroenterologist": [
+            "gastroenterologist",
+            "gastro",
+            "digestive"
+        ],
+
+        "dermatologist": [
+            "dermatologist",
+            "dermatology",
+            "skin"
+        ],
+
+        "neurologist": [
+            "neurologist",
+            "neurology",
+            "neuro"
+        ],
+
+        "ophthalmologist": [
+            "ophthalmologist",
+            "ophthalmology",
+            "eye"
+        ],
+
+        "pediatrician": [
+            "pediatrician",
+            "paediatrician",
+            "child",
+            "mother & child"
+        ],
+
+        "gynecologist": [
+            "gynecologist",
+            "gynaecologist",
+            "women"
+        ]
+
+    };
+
+
+    const possibleMatches =
+        aliases[
+            required
+        ] ||
+        [required];
+
+
+    return possibleMatches.some(
+        keyword =>
+            hospitalText.includes(
+                keyword
+            )
+    );
+
+}
+
+
+/* =========================================================
+   FIND ONE BEST HOSPITAL
 ========================================================= */
 
 function findBestHospital(
@@ -1507,32 +2252,57 @@ function findBestHospital(
 ) {
 
     const matchedHospitals =
+
         hospitals
-            .filter(hospital =>
-                specialists.includes(
-                    hospital.specialist
-                )
+
+            .filter(
+                hospital =>
+
+                    specialists.some(
+                        specialist =>
+
+                            hospitalMatchesSpecialist(
+                                hospital,
+                                specialist
+                            )
+
+                    )
+
             )
-            .map(hospital => {
 
-                const distance =
-                    calculateDistance(
-                        userLat,
-                        userLng,
-                        hospital.lat,
-                        hospital.lng
-                    );
+            .map(
+                hospital => {
 
-
-                return {
-                    ...hospital,
-                    distance
-                };
-
-            });
+                    const distance =
+                        calculateDistance(
+                            userLat,
+                            userLng,
+                            hospital.lat,
+                            hospital.lng
+                        );
 
 
-    if (!matchedHospitals.length) {
+                    return {
+
+                        ...hospital,
+
+                        numericRating:
+                            getNumericRating(
+                                hospital.rating
+                            ),
+
+                        distance:
+                            distance
+
+                    };
+
+                }
+            );
+
+
+    if (
+        !matchedHospitals.length
+    ) {
 
         return null;
 
@@ -1540,71 +2310,80 @@ function findBestHospital(
 
 
     /*
-       Score:
-       - Rating = 55%
-       - Distance = 45%
+       Rating = 55%
+       Distance = 45%
 
-       Higher rating and smaller distance
-       produce a better recommendation.
+       Higher rating and shorter distance
+       get better score.
     */
 
     const maxDistance =
         Math.max(
             ...matchedHospitals.map(
-                h => h.distance
+                hospital =>
+                    hospital.distance
             )
         );
 
 
-    const scored =
-        matchedHospitals.map(
-            hospital => {
+    matchedHospitals.forEach(
+        hospital => {
 
-                const ratingScore =
-                    hospital.rating / 5;
-
-
-                const distanceScore =
-                    maxDistance === 0
-                        ? 1
-                        : 1 -
-                          (
-                            hospital.distance /
-                            maxDistance
-                          );
+            const ratingScore =
+                Math.min(
+                    hospital.numericRating,
+                    5
+                ) / 5;
 
 
-                const score =
+            const distanceScore =
+                maxDistance === 0
+
+                    ? 1
+
+                    :
+
+                    1 -
                     (
-                        ratingScore * 0.55
-                    ) +
-                    (
-                        distanceScore * 0.45
+                        hospital.distance /
+                        maxDistance
                     );
 
 
-                return {
-                    ...hospital,
-                    score
-                };
+            hospital.score =
+                (
+                    ratingScore *
+                    0.55
+                ) +
 
-            }
-        );
+                (
+                    distanceScore *
+                    0.45
+                );
 
-
-    scored.sort(
-        (a, b) =>
-            b.score - a.score
+        }
     );
 
 
-    return scored[0];
+    matchedHospitals.sort(
+        (a, b) =>
+            b.score -
+            a.score
+    );
+
+
+    /*
+       IMPORTANT:
+       Only ONE hospital is returned.
+    */
+
+    return matchedHospitals[0];
 
 }
 
 
 /* =========================================================
-   FACILITY PAGE
+   INITIALIZE FACILITIES PAGE
 ========================================================= */
 
 function initializeFacilitiesPage() {
@@ -1614,10 +2393,11 @@ function initializeFacilitiesPage() {
             "#facilitiesContainer"
         );
 
+
     if (!container) return;
 
 
-    const savedSpecialists =
+    const specialists =
         JSON.parse(
             localStorage.getItem(
                 "selectedSpecialists"
@@ -1625,56 +2405,14 @@ function initializeFacilitiesPage() {
         );
 
 
-    if (!savedSpecialists.length) {
+    if (
+        !specialists.length
+    ) {
 
-        container.innerHTML = `
-
-            <div class="facility-loading">
-
-                <div class="loading-symbol">
-                    ✚
-                </div>
-
-                <h3>
-                    ${
-                        currentLanguage === "hi"
-                            ? "पहले लक्षण चुनें"
-                            : currentLanguage === "mr"
-                                ? "प्रथम लक्षणे निवडा"
-                                : "Select symptoms first"
-                    }
-                </h3>
-
-                <p>
-                    ${
-                        currentLanguage === "hi"
-                            ? "विशेषज्ञ खोजने के लिए वापस जाएं।"
-                            : currentLanguage === "mr"
-                                ? "तज्ज्ञ शोधण्यासाठी मागे जा."
-                                : "Go back and select your symptoms first."
-                    }
-                </p>
-
-                <br>
-
-                <a href="specialist.html"
-                   class="primary-btn">
-
-                    ${
-                        currentLanguage === "hi"
-                            ? "लक्षण चुनें"
-                            : currentLanguage === "mr"
-                                ? "लक्षणे निवडा"
-                                : "Select Symptoms"
-                    }
-
-                </a>
-
-            </div>
-
-        `;
+        showNoSymptomsMessage();
 
         return;
+
     }
 
 
@@ -1695,8 +2433,8 @@ function initializeFacilitiesPage() {
 
 
     /*
-       Automatically request location
-       when facilities page opens.
+       Automatically request
+       user's location.
     */
 
     requestLocation();
@@ -1705,22 +2443,29 @@ function initializeFacilitiesPage() {
 
 
 /* =========================================================
-   GEOLOCATION
+   REQUEST LOCATION
 ========================================================= */
 
 function requestLocation() {
 
-    const status =
-        document.querySelector(
-            "#locationStatus"
-        );
-
-
-    if (!navigator.geolocation) {
+    if (
+        !navigator.geolocation
+    ) {
 
         updateLocationStatus(
-            "Geolocation is not supported by this browser."
+
+            currentLanguage === "hi"
+
+                ? "इस ब्राउज़र में स्थान सुविधा उपलब्ध नहीं है।"
+
+                : currentLanguage === "mr"
+
+                    ? "या ब्राउझरमध्ये स्थान सुविधा उपलब्ध नाही."
+
+                    : "Geolocation is not supported by this browser."
+
         );
+
 
         showWithoutLocation();
 
@@ -1730,11 +2475,17 @@ function requestLocation() {
 
 
     updateLocationStatus(
+
         currentLanguage === "hi"
+
             ? "आपका स्थान खोजा जा रहा है..."
+
             : currentLanguage === "mr"
+
                 ? "तुमचे स्थान शोधत आहे..."
+
                 : "Finding your location..."
+
     );
 
 
@@ -1745,16 +2496,32 @@ function requestLocation() {
             const lat =
                 position.coords.latitude;
 
+
             const lng =
                 position.coords.longitude;
 
 
+            lastUserLocation = {
+
+                lat: lat,
+
+                lng: lng
+
+            };
+
+
             updateLocationStatus(
+
                 currentLanguage === "hi"
+
                     ? "स्थान सफलतापूर्वक मिल गया।"
+
                     : currentLanguage === "mr"
+
                         ? "स्थान यशस्वीपणे सापडले."
+
                         : "Location found successfully."
+
             );
 
 
@@ -1774,12 +2541,22 @@ function requestLocation() {
             );
 
 
+            lastUserLocation =
+                null;
+
+
             updateLocationStatus(
+
                 currentLanguage === "hi"
+
                     ? "स्थान की अनुमति नहीं मिली।"
+
                     : currentLanguage === "mr"
+
                         ? "स्थानाची परवानगी मिळाली नाही."
+
                         : "Location permission was not granted."
+
             );
 
 
@@ -1787,10 +2564,18 @@ function requestLocation() {
 
         },
 
+
         {
-            enableHighAccuracy: true,
-            timeout: 10000,
-            maximumAge: 60000
+
+            enableHighAccuracy:
+                true,
+
+            timeout:
+                10000,
+
+            maximumAge:
+                60000
+
         }
 
     );
@@ -1802,12 +2587,15 @@ function requestLocation() {
    LOCATION STATUS
 ========================================================= */
 
-function updateLocationStatus(message) {
+function updateLocationStatus(
+    message
+) {
 
     const status =
         document.querySelector(
             "#locationStatus"
         );
+
 
     if (status) {
 
@@ -1820,125 +2608,343 @@ function updateLocationStatus(message) {
 
 
 /* =========================================================
-   SHOW RECOMMENDATION
+   SPECIALIST RECOMMENDATION CARD
 ========================================================= */
 
-function showRecommendedHospital(
-    userLat,
-    userLng
+function createSpecialistRecommendation(
+    specialists
 ) {
 
-    const container =
-        document.querySelector(
-            "#facilitiesContainer"
-        );
+    if (
+        !specialists.length
+    ) {
 
-
-    if (!container) return;
-
-
-    const specialists =
-        JSON.parse(
-            localStorage.getItem(
-                "selectedSpecialists"
-            ) || "[]"
-        );
-
-
-    const hospital =
-        findBestHospital(
-            userLat,
-            userLng,
-            specialists
-        );
-
-
-    if (!hospital) {
-
-        showWithoutLocation();
-
-        return;
+        return "";
 
     }
 
 
-    const distance =
-        hospital.distance < 1
-            ? Math.round(
-                hospital.distance * 1000
-              ) + " m"
-            : hospital.distance.toFixed(1) +
-              " km";
+    /*
+       First specialist has the
+       highest score based on
+       selected symptoms.
+    */
 
+    const primarySpecialist =
+        specialists[0];
+
+
+    const primaryName =
+        specialistInfo[
+            primarySpecialist
+        ]
+
+            ? specialistInfo[
+                primarySpecialist
+            ][
+                currentLanguage
+            ]
+
+            : primarySpecialist;
+
+
+    const title =
+
+        currentLanguage === "hi"
+
+            ? "आपके लिए सुझाया गया विशेषज्ञ"
+
+            : currentLanguage === "mr"
+
+                ? "तुमच्यासाठी सुचवलेला तज्ज्ञ"
+
+                : "Recommended Specialist";
+
+
+    const note =
+
+        currentLanguage === "hi"
+
+            ? "आपके चुने हुए लक्षणों के आधार पर सामान्य मार्गदर्शन के लिए यह विशेषज्ञ सुझाया गया है।"
+
+            : currentLanguage === "mr"
+
+                ? "तुम्ही निवडलेल्या लक्षणांच्या आधारावर सामान्य मार्गदर्शनासाठी हा तज्ज्ञ सुचवला आहे."
+
+                : "Based on your selected symptoms, this specialist is suggested for general healthcare guidance.";
+
+
+    const otherSpecialists =
+        specialists
+            .slice(1)
+            .map(
+                specialist =>
+
+                    specialistInfo[
+                        specialist
+                    ]
+
+                        ? specialistInfo[
+                            specialist
+                        ][
+                            currentLanguage
+                        ]
+
+                        : specialist
+            )
+            .join(", ");
+
+
+    const otherLabel =
+
+        currentLanguage === "hi"
+
+            ? "अन्य संभावित विशेषज्ञ"
+
+            : currentLanguage === "mr"
+
+                ? "इतर संभाव्य तज्ज्ञ"
+
+                : "Other possible specialists";
+
+
+    return `
+
+        <div
+            class="specialist-recommendation"
+            style="
+                width:100%;
+                max-width:700px;
+                margin:25px auto;
+                padding:26px;
+                box-sizing:border-box;
+                background:#ffffff;
+                border:1px solid #dce8ef;
+                border-radius:20px;
+                box-shadow:0 8px 25px rgba(20,80,120,0.10);
+                display:flex;
+                gap:18px;
+                align-items:flex-start;
+            "
+        >
+
+            <div
+                style="
+                    width:55px;
+                    height:55px;
+                    border-radius:16px;
+                    background:#e8f6ff;
+                    color:#168acb;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    font-size:28px;
+                    flex-shrink:0;
+                "
+            >
+                ✚
+            </div>
+
+
+            <div
+                style="
+                    flex:1;
+                "
+            >
+
+                <div
+                    style="
+                        color:#168acb;
+                        font-size:14px;
+                        font-weight:600;
+                        margin-bottom:5px;
+                    "
+                >
+                    ${title}
+                </div>
+
+
+                <h2
+                    style="
+                        margin:0 0 10px;
+                        color:#172b3a;
+                        font-size:24px;
+                    "
+                >
+                    ${primaryName}
+                </h2>
+
+
+                <p
+                    style="
+                        margin:0;
+                        color:#52606d;
+                        line-height:1.6;
+                        font-size:15px;
+                    "
+                >
+                    ${note}
+                </p>
+
+
+                ${
+                    otherSpecialists
+
+                        ? `
+
+                            <div
+                                style="
+                                    margin-top:12px;
+                                    color:#687784;
+                                    font-size:14px;
+                                "
+                            >
+                                ${otherLabel}:
+                                ${otherSpecialists}
+                            </div>
+
+                        `
+
+                        : ""
+                }
+
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================================
+   HOSPITAL CARD
+========================================================= */
+
+function hospitalCardHTML(
+    hospital,
+    distanceText,
+    showDistance = true
+) {
 
     const specialistName =
         specialistInfo[
             hospital.specialist
         ]
-        ? specialistInfo[
-            hospital.specialist
-        ][currentLanguage]
-        : hospital.specialist;
+
+            ? specialistInfo[
+                hospital.specialist
+            ][
+                currentLanguage
+            ]
+
+            : hospital.specialist ||
+              "Healthcare Specialist";
+
+
+    const recommendedText =
+
+        currentLanguage === "hi"
+
+            ? "आपके लिए अनुशंसित अस्पताल"
+
+            : currentLanguage === "mr"
+
+                ? "तुमच्यासाठी सुचवलेले रुग्णालय"
+
+                : "Recommended Hospital";
 
 
     const ratingText =
+
         currentLanguage === "hi"
+
             ? "रेटिंग"
+
             : currentLanguage === "mr"
+
                 ? "रेटिंग"
+
                 : "Rating";
 
 
     const doctorText =
+
         currentLanguage === "hi"
+
             ? "डॉक्टर"
+
             : currentLanguage === "mr"
+
                 ? "डॉक्टर"
+
                 : "Doctor";
 
 
-    const distanceText =
+    const distanceLabel =
+
         currentLanguage === "hi"
+
             ? "दूरी"
+
             : currentLanguage === "mr"
+
                 ? "अंतर"
+
                 : "Distance";
 
 
     const phoneText =
+
         currentLanguage === "hi"
+
             ? "संपर्क"
+
             : currentLanguage === "mr"
+
                 ? "संपर्क"
+
                 : "Contact";
 
 
     const directionsText =
+
         currentLanguage === "hi"
+
             ? "दिशा देखें"
+
             : currentLanguage === "mr"
+
                 ? "दिशा पहा"
+
                 : "Get Directions";
 
 
-    const recommendedText =
-        currentLanguage === "hi"
-            ? "आपके लिए अनुशंसित"
-            : currentLanguage === "mr"
-                ? "तुमच्यासाठी सुचवलेले"
-                : "Recommended for You";
+    const doctorValue =
+        hospital.doctor ||
+
+        (
+            currentLanguage === "hi"
+
+                ? "जानकारी उपलब्ध नहीं"
+
+                : currentLanguage === "mr"
+
+                    ? "माहिती उपलब्ध नाही"
+
+                    : "Information not available"
+        );
 
 
     const mapsUrl =
-        "https://www.google.com/maps/dir/?api=1" +
-        "&destination=" +
+        "https://www.google.com/maps/search/?api=1&query=" +
+
         encodeURIComponent(
             hospital.name
-        ) +
-        "&destination_place_id=";
+        );
 
 
-    container.innerHTML = `
+    return `
 
         <div class="hospital-card">
 
@@ -1965,25 +2971,61 @@ function showRecommendedHospital(
 
 
                 <div class="rating">
-                    ★ ${hospital.rating} / 5
-                    <span>${ratingText}</span>
+
+                    ★
+                    ${hospital.numericRating.toFixed(1)}
+                    / 5
+
+                    <span>
+                        ${ratingText}
+                    </span>
+
                 </div>
 
 
                 <div class="hospital-details">
 
-                    <span class="detail-pill">
-                        ⊙ ${distanceText}: ${distance}
+                    ${
+                        showDistance
+
+                            ? `
+
+                                <span
+                                    class="detail-pill"
+                                >
+                                    ⊙
+                                    ${distanceLabel}:
+                                    ${distanceText}
+                                </span>
+
+                            `
+
+                            : ""
+                    }
+
+
+                    <span
+                        class="detail-pill"
+                    >
+
+                        ✚
+                        ${doctorText}:
+                        ${doctorValue}
+
                     </span>
 
 
-                    <span class="detail-pill">
-                        ✚ ${doctorText}: ${hospital.doctor}
-                    </span>
+                    <span
+                        class="detail-pill"
+                    >
 
+                        ☎
+                        ${phoneText}:
+                        ${
+                            hospital.phone ||
+                            "Not available"
+                        }
 
-                    <span class="detail-pill">
-                        ☎ ${phoneText}: ${hospital.phone}
                     </span>
 
                 </div>
@@ -1993,9 +3035,12 @@ function showRecommendedHospital(
                     href="${mapsUrl}"
                     target="_blank"
                     rel="noopener"
-                    class="directions-btn">
+                    class="directions-btn"
+                >
 
-                    ⊙ ${directionsText} →
+                    ⊙
+                    ${directionsText}
+                    →
 
                 </a>
 
@@ -2009,15 +3054,19 @@ function showRecommendedHospital(
 
 
 /* =========================================================
-   FALLBACK WITHOUT LOCATION
+   SHOW RECOMMENDED HOSPITAL
 ========================================================= */
 
-function showWithoutLocation() {
+function showRecommendedHospital(
+    userLat,
+    userLng
+) {
 
     const container =
         document.querySelector(
             "#facilitiesContainer"
         );
+
 
     if (!container) return;
 
@@ -2030,23 +3079,56 @@ function showWithoutLocation() {
         );
 
 
+    if (
+        !specialists.length
+    ) {
+
+        showNoSymptomsMessage();
+
+        return;
+
+    }
+
+
     const hospital =
-        hospitals.find(
-            item =>
-                specialists.includes(
-                    item.specialist
-                )
+        findBestHospital(
+            userLat,
+            userLng,
+            specialists
         );
 
 
     if (!hospital) {
 
         container.innerHTML = `
-            <div class="facility-loading">
-                <p>
-                    No matching facility found.
-                </p>
+
+            ${createSpecialistRecommendation(
+                specialists
+            )}
+
+
+            <div
+                class="facility-loading"
+            >
+
+                <h3>
+
+                    ${
+                        currentLanguage === "hi"
+
+                            ? "उपयुक्त अस्पताल नहीं मिला"
+
+                            : currentLanguage === "mr"
+
+                                ? "योग्य रुग्णालय सापडले नाही"
+
+                                : "No suitable hospital found"
+                    }
+
+                </h3>
+
             </div>
+
         `;
 
         return;
@@ -2054,65 +3136,305 @@ function showWithoutLocation() {
     }
 
 
-    const specialistName =
-        specialistInfo[
-            hospital.specialist
-        ]
-        ? specialistInfo[
-            hospital.specialist
-        ][currentLanguage]
-        : hospital.specialist;
+    const distanceText =
+
+        hospital.distance < 1
+
+            ? Math.round(
+                hospital.distance *
+                1000
+            ) + " m"
+
+            : hospital.distance.toFixed(
+                1
+            ) + " km";
+
+
+    const reasonText =
+
+        currentLanguage === "hi"
+
+            ? "यह अस्पताल उपयुक्त विशेषज्ञ, अच्छी रेटिंग और आपके स्थान से दूरी को ध्यान में रखकर चुना गया है।"
+
+            : currentLanguage === "mr"
+
+                ? "योग्य तज्ज्ञ, चांगले रेटिंग आणि तुमच्या स्थानापासूनचे अंतर लक्षात घेऊन हे रुग्णालय निवडले आहे."
+
+                : "This one hospital is selected using the suitable specialist, rating and distance from your location.";
 
 
     container.innerHTML = `
 
-        <div class="hospital-card">
+        ${createSpecialistRecommendation(
+            specialists
+        )}
 
-            <div class="hospital-icon">
+
+        <div
+            class="recommendation-note"
+        >
+            ${reasonText}
+        </div>
+
+
+        ${hospitalCardHTML(
+            hospital,
+            distanceText,
+            true
+        )}
+
+    `;
+
+}
+
+
+/* =========================================================
+   SHOW HOSPITAL WITHOUT LOCATION
+========================================================= */
+
+function showWithoutLocation() {
+
+    const container =
+        document.querySelector(
+            "#facilitiesContainer"
+        );
+
+
+    if (!container) return;
+
+
+    const specialists =
+        JSON.parse(
+            localStorage.getItem(
+                "selectedSpecialists"
+            ) || "[]"
+        );
+
+
+    if (
+        !specialists.length
+    ) {
+
+        showNoSymptomsMessage();
+
+        return;
+
+    }
+
+
+    const matchedHospitals =
+
+        hospitals
+
+            .filter(
+                hospital =>
+
+                    specialists.some(
+                        specialist =>
+
+                            hospitalMatchesSpecialist(
+                                hospital,
+                                specialist
+                            )
+
+                    )
+
+            )
+
+            .map(
+                hospital => ({
+
+                    ...hospital,
+
+                    numericRating:
+                        getNumericRating(
+                            hospital.rating
+                        )
+
+                })
+            );
+
+
+    if (
+        !matchedHospitals.length
+    ) {
+
+        container.innerHTML = `
+
+            ${createSpecialistRecommendation(
+                specialists
+            )}
+
+
+            <div
+                class="facility-loading"
+            >
+
+                <h3>
+
+                    ${
+                        currentLanguage === "hi"
+
+                            ? "उपयुक्त अस्पताल नहीं मिला"
+
+                            : currentLanguage === "mr"
+
+                                ? "योग्य रुग्णालय सापडले नाही"
+
+                                : "No suitable hospital found"
+                    }
+
+                </h3>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    /*
+       Location unavailable:
+       choose highest-rated suitable hospital.
+    */
+
+    matchedHospitals.sort(
+        (a, b) =>
+            b.numericRating -
+            a.numericRating
+    );
+
+
+    const hospital =
+        matchedHospitals[0];
+
+
+    const reasonText =
+
+        currentLanguage === "hi"
+
+            ? "स्थान की अनुमति उपलब्ध नहीं है, इसलिए यह अस्पताल दूरी के आधार पर नहीं चुना गया है।"
+
+            : currentLanguage === "mr"
+
+                ? "स्थानाची परवानगी उपलब्ध नसल्यामुळे हे रुग्णालय अंतराच्या आधारावर निवडलेले नाही."
+
+                : "Location permission is unavailable, so this recommendation is not based on distance.";
+
+
+    container.innerHTML = `
+
+        ${createSpecialistRecommendation(
+            specialists
+        )}
+
+
+        <div
+            class="recommendation-note"
+        >
+            ${reasonText}
+        </div>
+
+
+        ${hospitalCardHTML(
+            hospital,
+            "",
+            false
+        )}
+
+    `;
+
+}
+
+
+/* =========================================================
+   NO SYMPTOMS MESSAGE
+========================================================= */
+
+function showNoSymptomsMessage() {
+
+    const container =
+        document.querySelector(
+            "#facilitiesContainer"
+        );
+
+
+    if (!container) return;
+
+
+    const title =
+
+        currentLanguage === "hi"
+
+            ? "पहले लक्षण चुनें"
+
+            : currentLanguage === "mr"
+
+                ? "प्रथम लक्षणे निवडा"
+
+                : "Select symptoms first";
+
+
+    const text =
+
+        currentLanguage === "hi"
+
+            ? "विशेषज्ञ की सिफारिश पाने के लिए पहले अपने लक्षण चुनें।"
+
+            : currentLanguage === "mr"
+
+                ? "तज्ज्ञाची शिफारस मिळवण्यासाठी प्रथम तुमची लक्षणे निवडा."
+
+                : "Go back and select your symptoms first.";
+
+
+    const buttonText =
+
+        currentLanguage === "hi"
+
+            ? "लक्षण चुनें"
+
+            : currentLanguage === "mr"
+
+                ? "लक्षणे निवडा"
+
+                : "Select Symptoms";
+
+
+    container.innerHTML = `
+
+        <div
+            class="facility-loading"
+        >
+
+            <div
+                class="loading-symbol"
+            >
                 ✚
             </div>
 
-            <div class="hospital-content">
 
-                <span class="recommended-label">
-                    ★ Recommended
-                </span>
+            <h3>
+                ${title}
+            </h3>
 
-                <h3>
-                    ${hospital.name}
-                </h3>
 
-                <p class="specialist-name">
-                    ✚ ${specialistName}
-                </p>
+            <p>
+                ${text}
+            </p>
 
-                <div class="rating">
-                    ★ ${hospital.rating} / 5
-                </div>
 
-                <div class="hospital-details">
+            <br>
 
-                    <span class="detail-pill">
-                        ✚ ${hospital.doctor}
-                    </span>
 
-                    <span class="detail-pill">
-                        ☎ ${hospital.phone}
-                    </span>
-
-                </div>
-
-                <a
-                    href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hospital.name)}"
-                    target="_blank"
-                    rel="noopener"
-                    class="directions-btn">
-
-                    ⊙ Get Directions →
-
-                </a>
-
-            </div>
+            <a
+                href="specialist.html"
+                class="primary-btn"
+            >
+                ${buttonText}
+            </a>
 
         </div>
 
