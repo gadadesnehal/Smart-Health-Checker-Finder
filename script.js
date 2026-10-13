@@ -1134,9 +1134,9 @@ const symptomCategories = {
 const hospitals = [
    
      {
-        name: "CityCare General Hospital - Pune",
+        name: "Samarth Clinic Hinjewadi ",
         city: "Pune",
-        lat: 18.5919,
+        lat: 17.5919,
         lng: 73.7390,
         rating: 4.9,
         doctor: "Dr. Sachin Shivnitwar",
